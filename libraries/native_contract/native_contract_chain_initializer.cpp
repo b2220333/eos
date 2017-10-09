@@ -66,6 +66,7 @@ types::Abi native_contract_chain_initializer::eos_contract_abi()
    eos_abi.actions.push_back( types::Action{Name("okproducer"), "okproducer"} );
    eos_abi.actions.push_back( types::Action{Name("setproducer"), "setproducer"} );
    eos_abi.actions.push_back( types::Action{Name("setproxy"), "setproxy"} );
+   eos_abi.actions.push_back( types::Action{Name("setcode"), "setcode"} );
    eos_abi.actions.push_back( types::Action{Name("linkauth"), "linkauth"} );
    eos_abi.actions.push_back( types::Action{Name("unlinkauth"), "unlinkauth"} );
    eos_abi.actions.push_back( types::Action{Name("updateauth"), "updateauth"} );
@@ -78,6 +79,7 @@ types::Abi native_contract_chain_initializer::eos_contract_abi()
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::okproducer>::type() );
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::setproducer>::type() );
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::setproxy>::type() );
+   eos_abi.structs.push_back( eos::types::GetStruct<eos::types::setcode>::type() );
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::updateauth>::type() );
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::linkauth>::type() );
    eos_abi.structs.push_back( eos::types::GetStruct<eos::types::unlinkauth>::type() );
