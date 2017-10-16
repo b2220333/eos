@@ -2,7 +2,7 @@
 
 namespace exchange {
 
-   using currency::CurrencyTokens;
+   using CurrencyTokens = currency::CurrencyTokens;
    using EosTokens = eos::Tokens;
 
    //@abi exchange action cancelbuy cancelsell
@@ -17,7 +17,7 @@ namespace exchange {
    struct PACKED( Bid ) {
       OrderID            buyer;
       Price              price;
-      eos::Tokens        quantity;
+      EosTokens          quantity;
       Time               expiration;
 
       void print() {
@@ -26,7 +26,7 @@ namespace exchange {
    };
    static_assert( sizeof(Bid) == 32+12, "unexpected padding" );
    
-   //@abi exchange table 
+   //@abi exchange table
    struct PACKED( Ask ) {
       OrderID          seller;
       Price            price;
